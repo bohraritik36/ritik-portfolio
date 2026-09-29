@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ritik Bohara — Developer Portfolio</title>
+<meta name="description" content="Ritik Bohara — Developer portfolio covering Flutter, Django, React, PHP/Laravel, Firebase, REST APIs and databases.">
+<style>
+:root{--bg:#080a12;--panel:#10131f;--panel2:#151927;--text:#f4f6ff;--muted:#a8aec1;--line:#262b3d;--accent:#8b7cff;--accent2:#47d7c0;--white:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:-30%;z-index:-2;background:radial-gradient(circle at 20% 20%,rgba(139,124,255,.16),transparent 28%),radial-gradient(circle at 80% 35%,rgba(71,215,192,.11),transparent 24%),radial-gradient(circle at 50% 90%,rgba(139,124,255,.08),transparent 25%);pointer-events:none}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+.nav{height:78px;display:flex;align-items:center;justify-content:space-between}
+nav{position:sticky;top:0;z-index:50;background:rgba(8,10,18,.78);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.07)}
+.logo{font-size:22px;font-weight:900;letter-spacing:-1px}.logo i{color:var(--accent);font-style:normal}
+.navlinks{display:flex;gap:25px;font-size:14px;color:#c8ccda;font-weight:650}
+.navlinks a{transition:.2s}.navlinks a:hover{color:#fff}
+.hero{min-height:calc(100vh - 78px);display:grid;place-items:center;padding:90px 0 75px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;padding:7px 12px;border:1px solid #343951;border-radius:999px;background:#111524;color:#c9c5ff;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 14px var(--accent2)}
+h1{font-size:clamp(48px,7vw,86px);line-height:.98;letter-spacing:-4px;margin:23px 0}
+.gradient{background:linear-gradient(100deg,#fff 10%,#9f94ff 48%,#63e6d0 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-desc{max-width:680px;color:var(--muted);font-size:18px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:11px;border:1px solid var(--line);font-weight:800;font-size:14px;transition:.25s}
+.btn:hover{transform:translateY(-2px);border-color:#4a5069}.primary{background:#fff;color:#0b0d15;border-color:#fff}.ghost{background:#111421}
+.hero-card{position:relative;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid rgba(255,255,255,.11);border-radius:28px;padding:30px;box-shadow:0 30px 100px rgba(0,0,0,.35)}
+.hero-card:after{content:"";position:absolute;inset:-1px;border-radius:28px;padding:1px;background:linear-gradient(140deg,rgba(139,124,255,.55),transparent 45%,rgba(71,215,192,.3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none}
+.avatar{height:210px;border-radius:20px;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#2d3150,#15182a 58%,#0d0f19);font-size:70px;font-weight:950;letter-spacing:-5px;color:#fff}
+.profile-name{font-size:25px;font-weight:900;margin-top:22px}.profile-role{color:#aaaec1}.profile-location{font-size:13px;color:#777e94;margin-top:8px}
+.mini-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}.stat{background:#0d101a;border:1px solid #24293a;border-radius:13px;padding:14px}.stat b{display:block;font-size:18px}.stat span{color:#777e94;font-size:11px}
+section{padding:100px 0}.section-head{max-width:720px;margin-bottom:42px}.kicker{color:#8f84ff;text-transform:uppercase;font-weight:900;font-size:12px;letter-spacing:1.5px}.section-title{font-size:42px;line-height:1.1;letter-spacing:-1.7px;margin:9px 0 12px}.section-desc{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}
+.panel{background:rgba(16,19,31,.78);border:1px solid var(--line);border-radius:20px;padding:30px}
+.panel p{color:#aeb3c3}.focus-list{display:grid;gap:12px}.focus{display:flex;gap:14px;padding:15px;border-radius:13px;background:#0d101a;border:1px solid #23283a}.icon{width:34px;height:34px;border-radius:9px;background:#20243b;display:grid;place-items:center;color:#a69cff;font-weight:900;flex:0 0 auto}.focus b{display:block}.focus small{color:#777e94}
+.skill-wrap{display:grid;gap:20px}.skill-group h3{font-size:15px;margin-bottom:12px}.chips{display:flex;gap:9px;flex-wrap:wrap}.chip{padding:8px 12px;border-radius:9px;background:#111523;border:1px solid #2a3042;color:#cfd3df;font-size:13px;font-weight:700}
+.experience{position:relative;padding-left:32px;border-left:1px solid #33384b}.exp{position:relative;margin-bottom:38px}.exp:before{content:"";position:absolute;left:-39px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px #181a2a}.exp h3{font-size:22px}.meta{color:#8f84ff;font-size:13px;font-weight:800;margin:4px 0 12px}.exp ul,.project ul{padding-left:19px;color:#aeb3c3}.exp li,.project li{margin:7px 0}
+.project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{min-height:300px;display:flex;flex-direction:column}.project-num{font-size:12px;color:#777e94;font-weight:900;letter-spacing:1px}.project h3{font-size:23px;margin:8px 0}.project p{color:#aeb3c3;margin-bottom:15px}.project .tech{margin-top:auto;padding-top:20px;color:#8f84ff;font-size:12px;font-weight:850}
+.edu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.edu{position:relative;overflow:hidden}.edu:before{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-55px;top:-55px;background:rgba(139,124,255,.09)}.edu h3{font-size:20px}.edu p{color:#8f95a9;margin-top:8px}
+.contact{background:#0d1019;border-top:1px solid #1f2434;border-bottom:1px solid #1f2434}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.contact-item{padding:22px;border:1px solid #282d3f;border-radius:15px;background:#111522}.contact-item small{display:block;color:#737b91;text-transform:uppercase;letter-spacing:1px;font-size:10px;font-weight:900;margin-bottom:5px}.contact-item a{color:#e9eaff}.contact-item a:hover{color:#9e95ff}
+footer{padding:30px 0;color:#6e7589;font-size:12px;text-align:center}
+@media(max-width:800px){.navlinks{display:none}.hero{padding:65px 0}.hero-grid,.about-grid,.project-grid,.edu-grid,.contact-grid{grid-template-columns:1fr}.hero-card{max-width:520px;margin:auto}.avatar{height:180px}section{padding:70px 0}.section-title{font-size:34px}h1{letter-spacing:-2.5px}}
+</style>
+
+<style>
+.contact-form{max-width:820px;margin:30px auto 0;padding:28px;border:1px solid rgba(255,255,255,.10);border-radius:22px;background:rgba(255,255,255,.035);backdrop-filter:blur(14px);box-shadow:0 20px 60px rgba(0,0,0,.18)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.field{margin-bottom:18px}.field label{display:block;margin-bottom:8px;font-size:.9rem;font-weight:600}
+.field input,.field textarea{width:100%;box-sizing:border-box;border:1px solid rgba(255,255,255,.12);border-radius:12px;background:rgba(255,255,255,.045);color:inherit;padding:13px 14px;font:inherit;outline:none}
+.field textarea{resize:vertical;min-height:150px}
+.field input:focus,.field textarea:focus{border-color:rgba(255,255,255,.35);box-shadow:0 0 0 3px rgba(255,255,255,.04)}
+@media(max-width:700px){.form-grid{grid-template-columns:1fr}.contact-form{padding:20px}}
+</style>
+
+</head>
+<body>
+<nav><div class="container nav">
+<a class="logo" href="#">Ritik<span><i>.</i></span></a>
+<div class="navlinks"><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header class="hero">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow"><span class="dot"></span> Developer Portfolio</div>
+<h1>Building digital<br><span class="gradient">experiences</span> that work.</h1>
+<p class="hero-desc">I'm <strong>Ritik Bohara</strong>, a Developer focused on mobile applications, full-stack web technologies, backend integrations and scalable application development.</p>
+<div class="actions">
+<a class="btn primary" href="#projects">Explore My Work ↓</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/ritik-bohara" target="_blank">LinkedIn ↗</a>
+</div>
+</div>
+<div class="hero-card">
+<div class="avatar">RB</div>
+<div class="profile-name">Ritik Bohara</div>
+<div class="profile-role">Developer • Mobile • Full Stack</div>
+<div class="profile-location">Ahmedabad, Gujarat, India</div>
+<div class="mini-stats"><div class="stat"><b>1.5 yr</b><span>Professional Experience</span></div><div class="stat"><b>4+</b><span>Featured Projects</span></div></div>
+</div>
+</div>
+</header>
+
+<section id="about"><div class="container">
+<div class="section-head"><div class="kicker">01 — Profile</div><h2 class="section-title">About me</h2><p class="section-desc">A concise professional profile built from the information in the provided resumes.</p></div>
+<div class="about-grid">
+<div class="panel"><p>Results-driven Developer seeking a challenging role in software and web development. Eager to leverage expertise in mobile app development, full-stack web technologies, and backend integrations to build scalable applications and drive organizational value.</p></div>
+<div class="panel"><div class="focus-list">
+<div class="focus"><div class="icon">01</div><div><b>Mobile Development</b><small>Flutter, Dart & Android</small></div></div>
+<div class="focus"><div class="icon">02</div><div><b>Backend & APIs</b><small>Django, Laravel & REST APIs</small></div></div>
+<div class="focus"><div class="icon">03</div><div><b>Cloud & Data</b><small>Firebase, MySQL & MongoDB</small></div></div>
+</div></div>
+</div></div></section>
+
+<section id="skills"><div class="container">
+<div class="section-head"><div class="kicker">02 — Toolbox</div><h2 class="section-title">Technical skills</h2><p class="section-desc">Technologies and services listed across the provided resumes.</p></div>
+<div class="panel skill-wrap">
+<div class="skill-group"><h3>Programming & Application</h3><div class="chips"><span class="chip">Flutter</span><span class="chip">Android</span><span class="chip">React</span><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">Bootstrap</span><span class="chip">JavaScript</span><span class="chip">jQuery</span><span class="chip">PHP</span><span class="chip">Laravel</span><span class="chip">Python</span><span class="chip">Django</span></div></div>
+<div class="skill-group"><h3>Databases</h3><div class="chips"><span class="chip">MySQL</span><span class="chip">MongoDB</span></div></div>
+<div class="skill-group"><h3>Cloud & Integrations</h3><div class="chips"><span class="chip">Firebase Auth</span><span class="chip">Cloud Firestore</span><span class="chip">Realtime Database</span><span class="chip">Firebase Storage</span><span class="chip">RESTful APIs</span><span class="chip">Google Maps API</span></div></div>
+
+</div></div></section>
+
+<section id="experience"><div class="container">
+<div class="section-head"><div class="kicker">03 — Experience</div><h2 class="section-title">Professional experience</h2></div>
+<div class="experience"><div class="exp">
+<h3>Flutter Developer — Jaishree Ram International Pvt. Ltd.</h3>
+<div class="meta">1.5 Years • Project: Yellow Ride — Cab Booking Application</div>
+<ul>
+<li>Designed and implemented responsive core UI screens across Android and iOS platforms using Flutter.</li>
+<li>Developed the complete cab booking workflow including ride search, driver availability, fare estimation and booking confirmation.</li>
+<li>Configured Firebase Authentication using OTP/Phone and integrated Cloud Firestore and Realtime Database for live ride tracking and trip updates.</li>
+<li>Integrated Google Maps API and REST APIs for route previews, live driver tracking, fare calculation and location selection.</li>
+</ul>
+</div></div></div></section>
+
+<section id="projects"><div class="container">
+<div class="section-head"><div class="kicker">04 — Selected Work</div><h2 class="section-title">Projects</h2><p class="section-desc">Project descriptions are based on the information supplied in the resumes.</p></div>
+<div class="project-grid">
+<article class="panel project"><span class="project-num">PROJECT 01</span><h3>Yellow Ride</h3><p>Cab booking application with responsive mobile UI, booking workflows, real-time ride tracking and maps.</p><ul><li>Ride search, cab selection and booking</li><li>Fare estimation and driver availability</li><li>OTP authentication and live trip updates</li><li>Google Maps route and location integration</li></ul><div class="tech">Flutter • Firebase • REST APIs • Google Maps</div></article>
+<article class="panel project"><span class="project-num">PROJECT 02</span><h3>Cab & Driver Hiring System</h3><p>System for individuals or organizations to rent cars and drivers for a specific period.</p><ul><li>Django REST Framework authentication</li><li>Booking and payment workflows</li><li>MySQL vehicle and driver models</li><li>Flutter-to-Django REST communication</li></ul><div class="tech">Flutter • Django • MySQL • REST APIs</div></article>
+<article class="panel project"><span class="project-num">PROJECT 03</span><h3>Footwear E-Commerce App</h3><p>Digital platform for browsing, selecting and purchasing footwear conveniently.</p><ul><li>Product catalog management APIs</li><li>User authentication and order processing</li><li>MySQL inventory and order data</li><li>Flutter frontend and backend APIs</li></ul><div class="tech">Flutter • Django • MySQL • REST APIs</div></article>
+<article class="panel project"><span class="project-num">PROJECT 04</span><h3>Apna-Rasoiya</h3><p>Event and party catering and cook hiring platform built to help users find, compare and book service providers.</p><ul><li>Search and booking of verified cooks/caterers</li><li>Event requirements, menus and guest counts</li><li>Profiles, pricing estimates and ratings</li></ul><div class="tech">React.js • JavaScript • HTML • CSS • Bootstrap</div></article>
+</div></div></section>
+
+<section id="education"><div class="container">
+<div class="section-head"><div class="kicker">05 — Education</div><h2 class="section-title">Academic background</h2></div>
+<div class="edu-grid">
+<div class="panel edu"><h3>Master of Science in IT (Mobile Computing)</h3><p>GLS University, Ahmedabad, Gujarat</p></div>
+<div class="panel edu"><h3>Bachelor of Science in Mathematics</h3><p>S.S.G. Pareek P.G. College, Jaipur, Rajasthan</p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="container">
+<div class="section-head"><div class="kicker">06 — Contact</div><h2 class="section-title">Let's build something.</h2><p class="section-desc">For professional opportunities, projects or collaboration, get in touch.</p></div>
+<div class="contact-grid">
+<div class="contact-item"><small>Email</small><a href="mailto:bohraritik2001@gmail.com">bohraritik2001@gmail.com</a></div>
+<div class="contact-item"><small>Phone</small><a href="tel:+916378732432">+91 6378732432</a></div>
+<div class="contact-item"><small>LinkedIn</small><a href="https://www.linkedin.com/in/ritik-bohara" target="_blank">linkedin.com/in/ritik-bohara ↗</a></div>
+<div class="contact-item"><small>Location</small>Ahmedabad, Gujarat, India</div>
+</div></div></section>
+
+<section id="contact-form" class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">GET IN TOUCH</span>
+      <h2>Let's Work Together</h2>
+      <p>Have a project, opportunity, or collaboration in mind? Send me a message.</p>
+    </div>
+    <form class="contact-form" action="https://formsubmit.co/bohraritik2001@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="Portfolio Contact — Ritik Bohara">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+      <div class="form-grid">
+        <div class="field">
+          <label for="contact-name">Name</label>
+          <input id="contact-name" name="name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="contact-email">Email</label>
+          <input id="contact-email" name="email" type="email" placeholder="your@email.com" required>
+        </div>
+      </div>
+      <div class="field">
+        <label for="contact-subject">Subject</label>
+        <input id="contact-subject" name="subject" type="text" placeholder="Subject">
+      </div>
+      <div class="field">
+        <label for="contact-message">Message</label>
+        <textarea id="contact-message" name="message" rows="6" placeholder="Write your message..." required></textarea>
+      </div>
+      <button class="btn primary" type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+<footer>© 2026 Ritik Bohara • Developer Portfolio</footer>
+</body></html>
